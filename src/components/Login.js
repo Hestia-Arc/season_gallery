@@ -83,6 +83,7 @@ function Login() {
             <TextField
             // error
               id="input-with-sx"
+              type="password"
               label="Enter your password..."
               variant="standard"
               value={password}

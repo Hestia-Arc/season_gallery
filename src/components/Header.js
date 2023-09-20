@@ -140,13 +140,13 @@ function Header() {
         <Stack
           direction="row"
           alignItems="center"
-          spacing={5}
+          spacing={{sm: 1, md: 5}}
           sx={{ display: { xs: "none", sm: "flex" } }}
         >
-          <Typography variant="h5">Events</Typography>
-          <Typography variant="h5">Gallery</Typography>
-          <Typography variant="h5">Calender</Typography>
-          <Typography variant="h5">Bookings</Typography>
+          <Typography variant={{sm: 'h8', md: "h5"}}>Events</Typography>
+          <Typography variant={{sm: 'h8', md: "h5"}}>Gallery</Typography>
+          <Typography variant={{sm: 'h8', md: "h5"}}>Calender</Typography>
+          <Typography variant={{sm: 'h8', md: "h5"}}>Bookings</Typography>
           <LogoutRoundedIcon onClick={handleLogout} />
         </Stack>
 
