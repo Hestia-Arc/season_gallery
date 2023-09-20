@@ -6,22 +6,26 @@
 <br />
 <div align="center">
   <a href="https://season-gallery.vercel.app/">
-    <h2 width="80" height="80">🍁🍂 </h2>
+    <h2 width="120" height="120">🍁🍂🌴 </h2>
   </a>
 
 <h3 align="center">Season Photo gallery</h3>
 
   <p align="center">
-    An image gallery
+    An responsive image gallery that showcases collection o images about the four seasons around the year. <br>
+
+
+
+
     <br />
-    <a href="https://github.com/Hestia-Arc/movie_discovery_app_hngx"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Hestia-Arc/season_gallery"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Hestia-Arc/movie_discovery_app_hngx">View Demo</a>
+    <a href="https://season-gallery.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/Hestia-Arc/movie_discovery_app_hngx/issues">Report Bug</a>
+    <a href="https://github.com/Hestia-Arc/season_gallery/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Hestia-Arc/movie_discovery_app_hngx/issues">Request Feature</a>
+    <a href="https://github.com/Hestia-Arc/season_gallery/issues">Request Feature</a>
   </p>
 </div>
 
@@ -58,7 +62,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://movie-discovery-app-hng.vercel.app/)
+[![Product Name Screen Shot][product-screenshot]](https://season-gallery.vercel.app/)
 
 
 
@@ -70,7 +74,7 @@
 
 * [![React][React.js]][https://react.org/]
 * [![MUI][MUI]][https://mui.org/]
-* [![Tmdb][Tmdb]][https://moviedb.org/]
+
 
 
 
@@ -102,24 +106,24 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://moviedb.org](https://moviedb.org)
-2. Clone the repo
+
+1. Clone the repo
    ```sh
-   git clone https://github.com/Hestia-Arc/movie_discovery_app_hngx/.git
+   git clone https://github.com/Hestia-Arc/season_gallery.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Open your terminal
+3. Open your terminal
    ```js
 
    ```
-5. Run the server
+4. Run the server
    ```js
    npm start
    ```
-6. Open port in our browser
+5. Open port in our browser
    ```js
    
    ```
@@ -142,12 +146,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Drag and Drop Images
+- [ ] Authentication
+- [ ] Responsive layout
+- [ ] Search images based on tags
 
-See the [open issues](https://github.com/Hestia-Arc/movie_discovery_app_hngx/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Hestia-Arc/season_gallery/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,7 +189,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@twitter_handle](https://twitter.com/arc_hestia00) - starafolab@gmail.com
 
-Project Link: [https://github.com/Hestia-Arc/movie_discovery_app_hngx](https://github.com/Hestia-Arc/movie_discovery_app_hngx)
+Project Link: [https://github.com/Hestia-Arc/season_gallery](https://github.com/Hestia-Arc/season_gallery)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

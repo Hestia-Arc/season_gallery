@@ -149,7 +149,7 @@ function GalleryList() {
           .filter((item) => {
             return query.toLowerCase() === ""
               ? item
-              : item.tag.toLowerCase().includes(query);
+              : item.tag.toLowerCase().includes(query.toLowerCase());
           })
           .map(({ id, title, img, tag }) => (
             <>
