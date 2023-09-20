@@ -27,7 +27,7 @@ const ImageGalleryList = styled(Stack)(({ theme }) => ({
   // },
 }));
 
-function Gallery() {
+function GalleryList() {
   const gridRef = useRef(null);
   const sortableJsRef = useRef(null);
 
@@ -174,6 +174,7 @@ function Gallery() {
 
               {!loading && (
                 <Box
+                loading='lazy'
                   key={id}
                   data-id={id}
                   sx={{
@@ -193,7 +194,7 @@ function Gallery() {
                     boxShadow: "2px 6px 17px rgba(0,0,0,.1)",
                     border: "solid 1px #ebebeb",
                     // height: 400,
-                    width: { xs: "100%", sm: 200, md: "28%" },
+                    width: { xs: "90%", sm: 200, md: "28%" },
                     height: { xs: 200, sm: 200, md: 320 },
                   }}
                 >
@@ -207,7 +208,7 @@ function Gallery() {
   );
 }
 
-export default Gallery;
+export default GalleryList;
 
 // ORDINARY GRID SORTABLE JS IMPLEMENTATION
 

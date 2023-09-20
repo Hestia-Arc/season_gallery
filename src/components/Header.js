@@ -1,36 +1,44 @@
 import { Box, Stack, Typography, styled } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import BeachAccessRoundedIcon from "@mui/icons-material/BeachAccessRounded";
-import MainSummer from "../images/main-summer.jpg";
-import Sample from "../images/sample.jpg";
-import Clear from "../images/clear.jpg";
-import Calm from "../images/calm.jpg";
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import Autumn1 from "../images/autumn/autumn-large1.jpg";
+import Summer from "../images/summer/summer-large.jpg";
+import Winter from "../images/wnt/w-large.jpg";
+import Spring from "../images/spring/spring-large.jpg";
+import Autumn2 from "../images/autumn/autumn-large2.jpg";
+
+// import MainSummer from "../images/main-summer.jpg";
+// import Sample from "../images/sample.jpg";
+// import Clear from "../images/clear.jpg";
+// import Calm from "../images/calm.jpg";
+import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { UserAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 // import { Carousel } from 'react-responsive-carousel';
 
 const HeaderBox = styled(Box)(({ theme }) => ({
   height: 710,
-  boxShadow: '-3px 30px 15px 0px rgba(0,0,0,0.1)',
+  boxShadow: "-3px 30px 15px 0px rgba(0,0,0,0.1)",
   // backgroundColor: "grey",
   color: "#f5f5f5",
   padding: "0px 100px",
 
   [theme.breakpoints.down("sm")]: {
     padding: "0px 30px",
-    height: '568px'
+    height: "568px",
   },
-  [theme.breakpoints.between("sm", 'md')]: {
+  [theme.breakpoints.between("sm", "md")]: {
     padding: "0px 50px",
-    height: '568px'
+    height: "568px",
   },
 }));
 
 const QuoteBox = styled("blockquote")(({ theme }) => ({
-  width: '40%',
+  width: "40%",
   color: "#ccc",
   padding: "0px 100px",
-  fontFamily: 'Fredoka',
+  fontFamily: "Fredoka",
   fontSize: "26px",
   // background: '#f9f9f9',
   borderLeft: "5px solid #ccc",
@@ -40,7 +48,7 @@ const QuoteBox = styled("blockquote")(({ theme }) => ({
 
   "&:before": {
     color: "#ccc",
-    
+
     content: "open-quote",
     fontSize: "4em",
     lineHeight: "0.1em",
@@ -49,7 +57,7 @@ const QuoteBox = styled("blockquote")(({ theme }) => ({
   },
 
   [theme.breakpoints.down("sm")]: {
-    width: '80%',
+    width: "80%",
     fontSize: "16px",
   },
   // [theme.breakpoints.only("sm")]: {
@@ -59,6 +67,18 @@ const QuoteBox = styled("blockquote")(({ theme }) => ({
 
 function Header() {
   const [photo, setPhoto] = useState(1);
+  const { authUser, userLogout } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await userLogout();
+      navigate("/");
+      console.log("You are currently logged out");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -71,7 +91,7 @@ function Header() {
   }, [photo]);
 
   const change = () => {
-    if (photo === 4) {
+    if (photo === 5) {
       setPhoto(1);
       return;
     }
@@ -82,13 +102,15 @@ function Header() {
   const returnPhotoURL = () => {
     switch (photo) {
       case 1:
-        return Sample;
+        return Autumn1;
       case 2:
-        return MainSummer;
+        return Winter;
       case 3:
-        return Clear;
+        return Spring;
       case 4:
-        return Calm;
+        return Autumn2;
+      case 5:
+        return Summer;
       default:
         return null;
     }
@@ -125,8 +147,22 @@ function Header() {
           <Typography variant="h5">Gallery</Typography>
           <Typography variant="h5">Calender</Typography>
           <Typography variant="h5">Bookings</Typography>
-          <LogoutRoundedIcon/>
+          <LogoutRoundedIcon onClick={handleLogout} />
         </Stack>
+
+        <Box
+          sx={{
+            display: { xs: "block", sm: "none" },
+            paddingTop: 0.5,
+            cursor: "pointer",
+          }}
+        >
+          <LogoutRoundedIcon onClick={handleLogout} />
+        </Box>
+      </Stack>
+
+      <Stack direction="row" justifyContent="flex-end" sx={{ color: "orange" }}>
+        {authUser.email}
       </Stack>
 
       <Box
@@ -147,8 +183,6 @@ function Header() {
           in the human heart; yet no one can fathom what God has done from
           beginning to end.
         </QuoteBox>
-
-        
       </Box>
     </HeaderBox>
   );

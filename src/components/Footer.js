@@ -1,46 +1,101 @@
 import { Box, Stack, Typography, styled } from "@mui/material";
 import React from "react";
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
-import Calm from '../images/calm.jpg'
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import w5 from '../images/wnt/w-5.jpg'
+import a5 from '../images/autumn/a-5.jpg'
+import s2 from '../images/summer/summ-2.jpg'
+import s3 from '../images/summer/summ-3.jpg'
+import w1 from '../images/wnt/w-1.jpg'
+import w2 from '../images/wnt/w-2.jpg'
+import sp1 from '../images/spring/s-1.jpg'
+import sp2 from '../images/spring/s-2.jpg'
+import s5 from '../images/summer/summ-5.jpg'
+
+
 
 
 const FooterBox = styled(Box)({
-  minHeight: 200, borderRadius: 6,
-  border: "1px solid black",
+  minHeight: 200,
+  borderRadius: 6,
+  // border: "1px solid black",
 });
 
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
-  <img src={Calm} style={{height: 200, borderRadius: 6}} onDragStart={handleDragStart} role="presentation" />,
+  <img
+    src={w5}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={s2}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={s3}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={w1}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={w2}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={sp1}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={sp2}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={a5}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src={s5}
+    style={{ height: 200, borderRadius: 6 }}
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
 ];
 
 const responsive = {
-  0: { items: 1, itemsFit: 'fill', },
+  0: { items: 1, itemsFit: "fill" },
   600: { items: 2 },
   1024: { items: 3 },
   1400: { items: 5 },
-}
-
-
+};
 
 function Footer() {
   return (
     <FooterBox>
-      <Box  sx={{
-          
+      <Box
+        sx={{
           height: 80,
           textAlign: "center",
-        }}>
+        }}
+      >
         <Typography>Browse more from Unsplash</Typography>
       </Box>
       <Box
@@ -51,13 +106,11 @@ function Footer() {
           textAlign: "center",
         }}
       >
-        <Typography  
-          
-        >Browse more from Unsplash</Typography>
+        {/* <Typography>Browse more from Unsplash</Typography> */}
       </Box>
 
-      <Box sx={{height: 300, margin: '20px 0' }}>
-      <AliceCarousel mouseTracking items={items}  responsive={responsive}/>
+      <Box sx={{ height: 300, margin: "20px 0" }}>
+        <AliceCarousel mouseTracking items={items} responsive={responsive} />
       </Box>
       {/* <Stack direction="row">
         <FooterItem />
@@ -66,12 +119,12 @@ function Footer() {
         <FooterItem />
         <FooterItem />
       </Stack> */}
-      <Box  sx={{
-          
-      
+      <Box
+        sx={{
           height: 80,
           textAlign: "center",
-        }}>
+        }}
+      >
         <Typography>Browse more from Unsplash</Typography>
       </Box>
     </FooterBox>
