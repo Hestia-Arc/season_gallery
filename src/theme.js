@@ -5,8 +5,9 @@ export const theme = createTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 1200,
+      md: 1024,
       lg: 1400,
+      xl: 1900
     },
   },
   typography: {

@@ -32,6 +32,10 @@ const HeaderBox = styled(Box)(({ theme }) => ({
     padding: "0px 50px",
     height: "568px",
   },
+  [theme.breakpoints.up("xl")]: {
+    padding: "0px 400px",
+    height: "778px",
+  },
 }));
 
 const QuoteBox = styled("blockquote")(({ theme }) => ({
@@ -60,9 +64,14 @@ const QuoteBox = styled("blockquote")(({ theme }) => ({
     width: "80%",
     fontSize: "16px",
   },
-  // [theme.breakpoints.only("sm")]: {
-  //   padding: "0px 50px",
-  // },
+  [theme.breakpoints.only("sm")]: {
+    width: "70%",
+    fontSize: "16px",
+  },
+  [theme.breakpoints.only("md")]: {
+    width: "50%",
+    fontSize: "20px",
+  },
 }));
 
 function Header() {

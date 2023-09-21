@@ -79,7 +79,7 @@ function GalleryList() {
     <Box
       sx={{
         minHeight: "900px",
-        p: { xs: "80px 20px", sm: "30px 50px", md: "100px 100px" },
+        p: { xs: "80px 20px", sm: "70px 50px", md: "100px 60px", xl: '100px 400px' },
       }}
     >
       <Stack
