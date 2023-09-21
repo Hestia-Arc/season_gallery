@@ -85,7 +85,7 @@ function GalleryList() {
       <Stack
         direction={{ xs: "column", sm: "row" }}
         justifyContent="center"
-        alignItems='center'
+        alignItems="center"
         spacing={5}
         sx={{}}
       >
@@ -140,7 +140,9 @@ function GalleryList() {
 
       <ImageGalleryList
         direction={{ xs: "column", sm: "row" }}
-        spacing={{ xs: 3, sm: 2, md: 4 }}
+        spacing={{ xs: 3, sm: 2, md: 7 }}
+        justifyContent='center'
+        alignItems='center'
         flexWrap="wrap"
         useFlexGap
         ref={gridRef}
@@ -174,20 +176,20 @@ function GalleryList() {
 
               {!loading && (
                 <Box
-                loading='lazy'
+                  
                   key={id}
                   data-id={id}
                   sx={{
                     // border: "1px solid black",
-                    backgroundImage: `url(${img})`,
-                    backgroundPosition: "center center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundColor: "grey",
-                    display: "flex",
+                    // backgroundImage: `url(${img})`,
+                    // backgroundPosition: "center center",
+                    // backgroundRepeat: "no-repeat",
+                    // backgroundSize: "cover",
+                    // backgroundColor: "grey",
+                    // display: "flex",
                     // flexDirection: "column",
-                    justifyContent: "flex-end",
-                    padding: '10px',
+                    // justifyContent: "flex-end",
+                    // padding: '10px',
                     // alignItems: "center",
                     color: "#fff",
                     borderRadius: "8px",
@@ -196,9 +198,17 @@ function GalleryList() {
                     // height: 400,
                     width: { xs: "90%", sm: 200, md: "28%" },
                     height: { xs: 200, sm: 200, md: 320 },
+                    position: 'relative'
                   }}
                 >
-                  {title}
+                  <img
+                    src={img}
+                    alt="icon"
+                    loading="lazy"
+                    decoding="async"
+                    style={{ width: "100%", height: "100%", borderRadius: "8px", }}
+                  />
+                  <span style={{position: 'absolute', top: 8, right: 20}}>{title}</span>
                 </Box>
               )}
             </>

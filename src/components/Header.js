@@ -1,11 +1,11 @@
 import { Box, Stack, Typography, styled } from "@mui/material";
-import React, { useState, useEffect } from "react";
-import BeachAccessRoundedIcon from "@mui/icons-material/BeachAccessRounded";
-import Autumn1 from "../images/autumn/autumn-large1.jpg";
-import Summer from "../images/summer/summer-large.jpg";
+import React, { useState} from "react";
+// import BeachAccessRoundedIcon from "@mui/icons-material/BeachAccessRounded";
+// import Autumn1 from "../images/autumn/autumn-large1.jpg";
+// import Summer from "../images/summer/summer-large.jpg";
 import Winter from "../images/wnt/w-large.jpg";
-import Spring from "../images/spring/spring-large.jpg";
-import Autumn2 from "../images/autumn/autumn-large2.jpg";
+// import Spring from "../images/spring/spring-large.jpg";
+// import Autumn2 from "../images/autumn/autumn-large2.jpg";
 
 // import MainSummer from "../images/main-summer.jpg";
 // import Sample from "../images/sample.jpg";
@@ -80,47 +80,47 @@ function Header() {
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      change();
-    }, 10000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     change();
+  //   }, 10000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [photo]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [photo]);
 
-  const change = () => {
-    if (photo === 5) {
-      setPhoto(1);
-      return;
-    }
+  // const change = () => {
+  //   if (photo === 5) {
+  //     setPhoto(1);
+  //     return;
+  //   }
 
-    setPhoto((prev) => prev + 1);
-  };
+  //   setPhoto((prev) => prev + 1);
+  // };
 
-  const returnPhotoURL = () => {
-    switch (photo) {
-      case 1:
-        return Autumn1;
-      case 2:
-        return Winter;
-      case 3:
-        return Spring;
-      case 4:
-        return Autumn2;
-      case 5:
-        return Summer;
-      default:
-        return null;
-    }
-  };
+  // const returnPhotoURL = () => {
+  //   switch (photo) {
+  //     case 1:
+  //       return Autumn1;
+  //     case 2:
+  //       return Winter;
+  //     case 3:
+  //       return Spring;
+  //     case 4:
+  //       return Autumn2;
+  //     case 5:
+  //       return Summer;
+  //     default:
+  //       return null;
+  //   }
+  // };
 
   return (
     <HeaderBox
-      loading="lazy"
+      
       sx={{
-        backgroundImage: `url(${returnPhotoURL()})`,
+        backgroundImage: `url(${Winter})`,
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
