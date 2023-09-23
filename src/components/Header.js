@@ -163,7 +163,7 @@ function Header() {
         <Box
           sx={{
             display: { xs: "block", sm: "none" },
-            paddingTop: 0.5,
+            // paddingTop: 0.5,
             cursor: "pointer",
           }}
         >

@@ -4,7 +4,6 @@ import { theme } from "./theme";
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 
-
 function App() {
   // const { authUser, userLogout } = UserAuth();
   // const navigate = useNavigate();
@@ -20,7 +19,7 @@ function App() {
   // };
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{background: '#031323'}}>
+      {/* <Box sx={{background: '#031323'}}> */}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/gallery" element={<Gallery />} />
@@ -31,7 +30,7 @@ function App() {
         <button onClick={handleLogout}>Sign out</button>
       </p> */}
 
-</Box>
+      {/* </Box> */}
     </ThemeProvider>
   );
 }
