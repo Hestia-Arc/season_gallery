@@ -86,7 +86,7 @@ function GalleryList() {
         direction={{ xs: "column", sm: "row" }}
         justifyContent="center"
         alignItems="center"
-        spacing={5}
+        spacing={{xs: 1, sm: 1.1, md:5}}
         sx={{}}
       >
         <Box sx={{ fontSize: "50px" }}>🍁🌳</Box>
@@ -95,31 +95,32 @@ function GalleryList() {
           spacing={3}
           sx={{ justifyContent: "center", alignItems: "center" }}
         >
-          <Typography variant="h3">Explore the seasons!</Typography>
+          <Typography variant="h4">Explore the seasons!</Typography>
 
           <Stack
             direction="row"
             justifyContent="center"
             useFlexGap
             flexWrap="wrap"
-            spacing={{ xs: 2, sm: 2.5 }}
+            spacing={{ xs: 1.2, sm: 1.5, md: 2.2 }}
           >
             <Chip label="Spring" variant="outlined" />
             <Chip label="Summer" variant="outlined" />
-            <Chip label="Autumn" variant="outlined" />
+            {/* <Chip label="Autumn" variant="outlined" /> */}
             <Chip label="Fall" variant="outlined" />
             <Chip label="Winter" variant="outlined" />
           </Stack>
 
-          <form>
-            <label>Want to see some pictures? </label>
+          <Stack direction={{xs: 'column', sm: 'row'}} spacing={1} alignItems='center'>
+            <label>Want some pictures? </label>
             <input
               type="text"
               value={query}
               placeholder="Explore..."
               onChange={(e) => setQuery(e.target.value)}
               style={{
-                height: 25,
+                height: 20,
+                width: '150px',
                 fontSize: 20,
                 borderRadius: 50,
                 boxShadow: "2px 6px 17px rgba(0,0,0,.1)",
@@ -128,7 +129,7 @@ function GalleryList() {
                 padding: "10px 15px",
               }}
             />
-          </form>
+          </Stack>
           <Stack></Stack>
         </Stack>
 
