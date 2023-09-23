@@ -1,5 +1,5 @@
-import { Box, Stack, Typography, styled } from "@mui/material";
-import React, { useState} from "react";
+import { Box, Stack, Typography, styled, Button } from "@mui/material";
+import React, { useState } from "react";
 // import BeachAccessRoundedIcon from "@mui/icons-material/BeachAccessRounded";
 // import Autumn1 from "../images/autumn/autumn-large1.jpg";
 // import Summer from "../images/summer/summer-large.jpg";
@@ -127,7 +127,6 @@ function Header() {
 
   return (
     <HeaderBox
-      
       sx={{
         backgroundImage: `url(${Winter})`,
         backgroundPosition: "center center",
@@ -149,14 +148,16 @@ function Header() {
         <Stack
           direction="row"
           alignItems="center"
-          spacing={{sm: 1, md: 5}}
+          spacing={{ sm: 1, md: 5 }}
           sx={{ display: { xs: "none", sm: "flex" } }}
         >
-          <Typography variant={{sm: 'h8', md: "h5"}}>Events</Typography>
-          <Typography variant={{sm: 'h8', md: "h5"}}>Gallery</Typography>
-          <Typography variant={{sm: 'h8', md: "h5"}}>Calender</Typography>
-          <Typography variant={{sm: 'h8', md: "h5"}}>Bookings</Typography>
-          <LogoutRoundedIcon onClick={handleLogout} />
+          <Button
+            onClick={handleLogout}
+            variant="contained"
+            endIcon={<LogoutRoundedIcon />}
+          >
+            LogOut
+          </Button>
         </Stack>
 
         <Box
@@ -166,13 +167,19 @@ function Header() {
             cursor: "pointer",
           }}
         >
-          <LogoutRoundedIcon onClick={handleLogout} />
+          <Button
+            onClick={handleLogout}
+            variant="contained"
+            endIcon={<LogoutRoundedIcon />}
+          >
+            LogOut
+          </Button>
         </Box>
       </Stack>
 
-      <Stack direction="row" justifyContent="flex-end" sx={{ color: "orange" }}>
+      {/* <Stack direction="row" justifyContent="flex-end" sx={{ color: "orange" }}>
         {authUser.email}
-      </Stack>
+      </Stack> */}
 
       <Box
         sx={{

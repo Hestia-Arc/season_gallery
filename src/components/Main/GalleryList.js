@@ -119,7 +119,7 @@ function GalleryList() {
               placeholder="Explore..."
               onChange={(e) => setQuery(e.target.value)}
               style={{
-                height: 30,
+                height: 25,
                 fontSize: 20,
                 borderRadius: 50,
                 boxShadow: "2px 6px 17px rgba(0,0,0,.1)",

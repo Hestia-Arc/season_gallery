@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider, Box } from "@mui/material";
 import Gallery from "./Pages/Gallery";
 import { theme } from "./theme";
 import { Route, Routes } from "react-router-dom";
@@ -20,6 +20,7 @@ function App() {
   // };
   return (
     <ThemeProvider theme={theme}>
+      <Box sx={{background: '#031323'}}>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/gallery" element={<Gallery />} />
@@ -30,7 +31,7 @@ function App() {
         <button onClick={handleLogout}>Sign out</button>
       </p> */}
 
-     
+</Box>
     </ThemeProvider>
   );
 }
